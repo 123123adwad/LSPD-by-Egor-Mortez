@@ -1,0 +1,106 @@
+/* Handbook-specific refinements */
+
+/* Refined header emblem link */
+.header-emblem a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Smooth section transitions */
+.section {
+    position: relative;
+}
+
+/* Table first column article style */
+tbody td:first-child {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+}
+
+/* Enhanced card value typography */
+.card-value {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    letter-spacing: 1px;
+}
+
+/* Subtle glow on active section number */
+.sidebar-link.active .num {
+    text-shadow: 0 0 8px rgba(91,157,230,0.3);
+}
+
+/* Refined alert spacing */
+.alert + .alert {
+    margin-top: 8px;
+}
+
+/* Steps connector line */
+.steps {
+    position: relative;
+}
+.steps li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 13.5px;
+    top: 35px;
+    width: 1px;
+    height: calc(100% - 25px);
+    background: linear-gradient(180deg, var(--accent-primary-border), transparent);
+    opacity: 0.3;
+}
+
+/* Card value for special items */
+.card-value[style] {
+    font-family: inherit !important;
+}
+
+/* Donation number styling */
+.donate-number {
+    letter-spacing: 4px;
+}
+
+/* Subtle border on focus for search */
+.header-search input:focus {
+    box-shadow: 0 0 0 3px rgba(91,157,230,0.08), 0 0 20px rgba(91,157,230,0.05);
+}
+
+/* Enhanced scroll behavior for content */
+.content {
+    scroll-padding-top: calc(var(--header-height) + 24px);
+}
+
+/* Mirror text emphasis */
+.miranda-text::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+    margin: 0 auto 16px;
+}
+
+/* Scenario header accent */
+.scenario-header {
+    position: relative;
+}
+.scenario-header::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--accent-primary);
+    opacity: 0.5;
+}
+
+/* Detail body refined */
+details .detail-body {
+    padding: 0 18px 18px;
+}
+
+/* Section divider */
+.section:not(:last-child) {
+    padding-bottom: 8px;
+}
